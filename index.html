@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ===================== SEO ===================== -->
+<title>Bellwood Construction LLC | Remodeling Contractor in Everett, WA</title>
+<meta name="description" content="Kitchen and bathroom remodeling in Everett, WA — across Snohomish County, Seattle and the Eastside. Free quotes: (425) 697-0732.">
+<meta name="theme-color" content="#FAF7F2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1A1714" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="/">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bellwood Construction LLC | Remodeling Contractor in Everett, WA">
+<meta property="og:description" content="Kitchen and bathroom remodels across Everett, Snohomish County, Seattle and the Eastside. Locally owned, one crew start to finish.">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Bellwood Construction LLC">
+<meta property="og:image" content="assets/projects/kitchen-two-tone-open-plan.jpg">
+<meta property="og:image:alt" content="Open-concept kitchen remodel with two-tone shaker cabinets and quartz counters.">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ===================== FONTS =====================
+     Two families only, preconnected and swapped so text paints
+     immediately on slow connections. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap">
+
+<!-- ===================== STYLES ===================== -->
+<link rel="stylesheet" href="css/styles.css">
+
+<!-- Leaflet (service-area map). Deferred so it never blocks paint. -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="assets/favicon-180.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<!-- ===================== STRUCTURED DATA =====================
+     LocalBusiness / GeneralContractor markup for Google.
+     NOTE: this mirrors section 1 of js/config.js. When you fill in the
+     street address there, update it here too — the [PLACEHOLDER] values
+     below are the only ones that need it. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Bellwood Construction LLC",
+  "description": "Residential remodeling contractor in Everett, Washington. Kitchen and bathroom remodels throughout Snohomish County, Seattle and the Eastside.",
+  "telephone": "+1-425-697-0732",
+  "email": "BellwoodConstructionLLC@gmail.com",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[STREET ADDRESS]",
+    "addressLocality": "Everett",
+    "addressRegion": "WA",
+    "postalCode": "[ZIP]",
+    "addressCountry": "US"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 47.9790, "longitude": -122.2021 },
+  "areaServed": [
+    { "@type": "City", "name": "Everett" },
+    { "@type": "City", "name": "Mukilteo" },
+    { "@type": "City", "name": "Lynnwood" },
+    { "@type": "City", "name": "Edmonds" },
+    { "@type": "City", "name": "Mill Creek" },
+    { "@type": "City", "name": "Bothell" },
+    { "@type": "City", "name": "Marysville" },
+    { "@type": "City", "name": "Lake Stevens" },
+    { "@type": "City", "name": "Snohomish" },
+    { "@type": "City", "name": "Monroe" },
+    { "@type": "City", "name": "Arlington" },
+    { "@type": "City", "name": "Seattle" },
+    { "@type": "City", "name": "Bellevue" },
+    { "@type": "City", "name": "Kirkland" },
+    { "@type": "City", "name": "Redmond" },
+    { "@type": "City", "name": "Mercer Island" },
+    { "@type": "AdministrativeArea", "name": "Snohomish County, Washington" },
+    { "@type": "AdministrativeArea", "name": "King County, Washington" }
+  ],
+  "knowsAbout": ["Kitchen remodeling","Bathroom remodeling"],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00", "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00", "closes": "15:00"
+    }
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodels" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Remodels" } }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ============================================================
+     STICKY HEADER
+     ============================================================ -->
+<header class="site-header" id="siteHeader">
+  <div class="shell header-inner">
+
+    <a class="wordmark" href="#top" aria-label="Bellwood Construction — back to top">
+      <span class="wordmark__mark" aria-hidden="true"></span>
+      <span class="wordmark__text">
+        <span class="wordmark__name">Bellwood</span>
+        <span class="wordmark__sub">Construction</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Primary">
+      <ul class="nav__list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#area">Service Area</a></li>
+        <li><a href="#book">Book a Visit</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!-- Shown only inside the mobile drawer, where the header CTA is hidden -->
+      <a class="btn btn--primary btn--block nav__cta" href="#quote">Get a Free Quote</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="header-phone" id="headerPhone" href="#">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="ico">
+          <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z" fill="currentColor"/>
+        </svg>
+        <span class="header-phone__num"></span>
+      </a>
+
+      <button class="theme-toggle" id="themeToggle" type="button"
+              aria-label="Switch to dark mode" aria-pressed="false">
+        <svg class="ico ico--sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+            <path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/>
+          </g>
+        </svg>
+        <svg class="ico ico--moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 14.4A8.5 8.5 0 0 1 9.6 4a8.5 8.5 0 1 0 10.4 10.4z" fill="currentColor"/>
+        </svg>
+      </button>
+
+      <a class="btn btn--primary btn--sm header-cta" href="#quote">Get a Free Quote</a>
+
+      <button class="hamburger" id="navToggle" type="button"
+              aria-expanded="false" aria-controls="primaryNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="nav-scrim" id="navScrim" hidden></div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero__media">
+    <img id="heroImage" class="hero__img" src="" alt="" fetchpriority="high" decoding="async">
+  </div>
+  <div class="hero__veil" aria-hidden="true"></div>
+
+  <div class="shell hero__inner">
+    <p class="hero__eyebrow">Everett, Washington &middot; Residential Remodeling</p>
+    <h1 class="hero__title">
+      Everett's remodeling team, from first sketch to final walkthrough
+    </h1>
+    <p class="hero__lede">
+      Kitchens and bathrooms built by one crew that shows up, cleans up, and
+      finishes what it starts — from Everett through Snohomish County to Seattle
+      and the Eastside.
+    </p>
+    <div class="hero__cta">
+      <a class="btn btn--primary btn--lg" href="#quote">Get a Free Quote</a>
+      <a class="btn btn--ghost btn--lg" href="#work">See Our Work</a>
+    </div>
+  </div>
+
+  <!-- Trust strip -->
+  <div class="trust">
+    <div class="shell trust__inner">
+      <div class="trust__item">
+        <span class="trust__big" id="trustYears"></span>
+        <span class="trust__label" id="trustYearsLabel"></span>
+      </div>
+      <div class="trust__item">
+        <span class="trust__big">Locally owned</span>
+        <span class="trust__label">Everett, WA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICES
+     ============================================================ -->
+<section class="section" id="services">
+  <div class="shell">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">What we build</p>
+      <h2 class="section-title">Remodeling, done properly</h2>
+      <p class="section-lede">
+        Two things we do all day, every day. Tap either card for the details —
+        or send us the one you're thinking about.
+      </p>
+    </header>
+
+    <div class="services" id="servicesGrid"><!-- built by js/app.js --></div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     OUR WORK
+     ============================================================ -->
+<section class="section section--tint" id="work">
+  <div class="shell">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Our work</p>
+      <h2 class="section-title">Recent projects</h2>
+      <p class="section-lede">
+        Tap any photo to open it full size. Every one is a real Bellwood job —
+        nothing staged, nothing borrowed.
+      </p>
+    </header>
+
+    <div class="filters" role="group" aria-label="Filter projects by room" id="galleryFilters"></div>
+
+    <div class="gallery" id="galleryGrid" aria-live="polite"><!-- built by js/app.js --></div>
+
+    <div class="gallery__open" data-reveal>
+      <button class="btn btn--primary btn--lg" type="button" id="galleryOpen">
+        <svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9V4h5M21 9V4h-5M3 15v5h5M21 15v5h-5"/>
+        </svg>
+        <span id="galleryOpenLabel">Browse the photos</span>
+      </button>
+    </div>
+
+    <p class="gallery__note" id="galleryNote" data-reveal></p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     PROCESS
+     ============================================================ -->
+<section class="section process" id="process">
+  <div class="shell">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">How it goes</p>
+      <h2 class="section-title">Four steps, no surprises</h2>
+    </header>
+
+    <div class="process__layout">
+      <ol class="timeline" id="timeline"><!-- built by js/app.js --></ol>
+
+      <figure class="process__figure" data-reveal>
+        <img id="processImage" src="" alt="" loading="lazy" decoding="async">
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SERVICE AREA
+     ============================================================ -->
+<section class="section section--tint" id="area">
+  <div class="area-banner">
+    <img id="areaImage" src="" alt="" loading="lazy" decoding="async">
+    <div class="area-banner__veil" aria-hidden="true"></div>
+    <div class="shell area-banner__inner">
+      <p class="eyebrow eyebrow--light">Service area</p>
+      <h2 class="section-title section-title--light">Based in Everett. At home from Snohomish County to Seattle.</h2>
+    </div>
+  </div>
+
+  <div class="shell area__layout">
+
+    <div class="area__map-wrap" data-reveal>
+      <div id="areaMap" class="area__map" role="img"
+           aria-label="Map of the Bellwood Construction service area, based in Everett, Washington, with markers on Mukilteo, Lynnwood, Edmonds, Mill Creek, Bothell, Marysville, Lake Stevens, Snohomish, Monroe, Arlington, Seattle and Bellevue."></div>
+      <noscript><p class="area__noscript">Map requires JavaScript. We serve Everett and the surrounding Snohomish County cities listed here.</p></noscript>
+    </div>
+
+    <div class="area__side" data-reveal>
+      <h3 class="area__h3">Do we serve your area?</h3>
+      <p class="area__p">Type your city or ZIP code and find out right now.</p>
+
+      <form class="checker" id="areaChecker" novalidate>
+        <label class="sr-only" for="areaInput">Your city or ZIP code</label>
+        <div class="checker__row">
+          <input id="areaInput" name="area" type="text" class="checker__input"
+                 placeholder="Everett, or 98201" autocomplete="postal-code"
+                 aria-describedby="areaResult" enterkeyhint="search">
+          <button class="btn btn--forest" type="submit">Check</button>
+        </div>
+        <p class="checker__result" id="areaResult" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="checker__fallback">
+        Not sure? Call <a class="link" id="checkerPhone" href="#"></a>
+      </p>
+
+      <h4 class="area__h4">Cities we cover</h4>
+      <ul class="chips chips--static" id="areaCityList"></ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     BOOK A VISIT
+     ============================================================ -->
+<section class="section" id="book">
+  <div class="shell">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Book a visit</p>
+      <h2 class="section-title">Pick a time that works</h2>
+      <p class="section-lede">
+        A free, no-pressure in-home consultation — about an hour. We look at the
+        space, talk through options, and give you honest numbers.
+      </p>
+    </header>
+
+    <div class="booking" data-reveal>
+      <form id="bookingForm" class="booking__form" novalidate>
+
+        <!-- ---- Step A: date + time ---- -->
+        <div class="booking__grid">
+
+          <div class="booking__cal">
+            <div class="cal__head">
+              <button class="cal__nav" type="button" id="calPrev" aria-label="Previous month">
+                <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <h3 class="cal__title" id="calTitle" aria-live="polite"></h3>
+              <button class="cal__nav" type="button" id="calNext" aria-label="Next month">
+                <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+
+            <div class="cal__dow" aria-hidden="true">
+              <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            </div>
+
+            <div class="cal__grid" id="calGrid" role="grid"
+                 aria-label="Choose a consultation date"></div>
+
+            <p class="cal__legend">
+              <span class="legend-dot legend-dot--open"></span> Available
+              <span class="legend-dot legend-dot--closed"></span> Unavailable
+            </p>
+          </div>
+
+          <div class="booking__slots">
+            <h3 class="booking__h3" id="slotsHeading">Available times</h3>
+            <p class="booking__tz" id="slotsTz"></p>
+            <div class="slots" id="slotList" role="group" aria-labelledby="slotsHeading">
+              <p class="slots__empty">Choose a date to see open times.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ---- Step B: details ---- -->
+        <fieldset class="fields">
+          <legend class="booking__h3">Your details</legend>
+
+          <div class="field">
+            <label for="bkName">Name <span aria-hidden="true">*</span></label>
+            <input id="bkName" name="name" type="text" autocomplete="name" required>
+            <p class="field__err" data-err-for="bkName"></p>
+          </div>
+
+          <div class="field">
+            <label for="bkPhone">Phone <span aria-hidden="true">*</span></label>
+            <input id="bkPhone" name="phone" type="tel" autocomplete="tel"
+                   inputmode="tel" placeholder="(425) 555-0100" required>
+            <p class="field__err" data-err-for="bkPhone"></p>
+          </div>
+
+          <div class="field">
+            <label for="bkEmail">Email <span aria-hidden="true">*</span></label>
+            <input id="bkEmail" name="email" type="email" autocomplete="email"
+                   inputmode="email" required>
+            <p class="field__err" data-err-for="bkEmail"></p>
+          </div>
+
+          <div class="field field--wide">
+            <label for="bkAddress">Project address <span aria-hidden="true">*</span></label>
+            <input id="bkAddress" name="address" type="text" autocomplete="street-address"
+                   placeholder="Street, city" required>
+            <p class="field__err" data-err-for="bkAddress"></p>
+          </div>
+
+          <div class="field field--wide">
+            <label for="bkType">Project type <span aria-hidden="true">*</span></label>
+            <select id="bkType" name="projectType" required></select>
+            <p class="field__err" data-err-for="bkType"></p>
+          </div>
+
+          <!-- Honeypot: hidden from people, catches bots -->
+          <div class="hp" aria-hidden="true">
+            <label for="bkCompany">Company</label>
+            <input id="bkCompany" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+        </fieldset>
+
+        <p class="form__error" id="bookingError" role="alert"></p>
+
+        <button class="btn btn--forest btn--lg btn--block" type="submit" id="bookingSubmit">
+          Request this time
+        </button>
+        <p class="form__small">
+          We'll confirm by phone or email within one business day. Requesting a
+          time doesn't lock it in until we confirm.
+        </p>
+      </form>
+
+      <!-- Confirmation screen -->
+      <div class="confirm" id="bookingConfirm" hidden>
+        <div class="confirm__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="confirm__title">Consultation requested</h3>
+        <p class="confirm__lede" id="confirmLede"></p>
+        <dl class="confirm__summary" id="confirmSummary"></dl>
+        <div class="confirm__actions">
+          <a class="btn btn--forest" id="icsDownload" href="#" download>Add to calendar (.ics)</a>
+          <button class="btn btn--ghost" type="button" id="bookingReset">Book another time</button>
+        </div>
+        <p class="form__small" id="confirmFallback"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     QUOTE REQUEST — multi-step
+     ============================================================ -->
+<section class="section section--tint" id="quote">
+  <div class="shell shell--narrow">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Free quote</p>
+      <h2 class="section-title">Tell us about your project</h2>
+      <p class="section-lede">Four quick steps. Takes about two minutes.</p>
+    </header>
+
+    <div class="wizard" data-reveal>
+
+      <!-- progress -->
+      <div class="progress" role="group" aria-label="Form progress">
+        <div class="progress__bar" aria-hidden="true">
+          <div class="progress__fill" id="progressFill"></div>
+        </div>
+        <ol class="progress__steps" id="progressSteps">
+          <li><span class="progress__num">1</span><span class="progress__label">Project</span></li>
+          <li><span class="progress__num">2</span><span class="progress__label">Scope</span></li>
+          <li><span class="progress__num">3</span><span class="progress__label">Photos</span></li>
+          <li><span class="progress__num">4</span><span class="progress__label">Contact</span></li>
+        </ol>
+        <p class="sr-only" id="progressStatus" role="status" aria-live="polite"></p>
+      </div>
+
+      <form id="quoteForm" novalidate enctype="multipart/form-data">
+
+        <!-- ---------- STEP 1 ---------- -->
+        <section class="step is-active" data-step="1" aria-label="Step 1: project type and timeline">
+          <h3 class="step__title">What are we building?</h3>
+          <div class="picker" id="typePicker" role="radiogroup" aria-label="Project type"></div>
+          <p class="field__err" data-err-for="projectType"></p>
+
+          <h3 class="step__title step__title--gap">When would you like to start?</h3>
+          <div class="field">
+            <label class="sr-only" for="qTimeline">Rough timeline</label>
+            <select id="qTimeline" name="timeline" required></select>
+            <p class="field__err" data-err-for="qTimeline"></p>
+          </div>
+        </section>
+
+        <!-- ---------- STEP 2 ---------- -->
+        <section class="step" data-step="2" hidden aria-label="Step 2: budget and description">
+          <h3 class="step__title">Rough budget range</h3>
+          <p class="step__hint">A range is plenty — it helps us suggest options that actually fit.</p>
+          <div class="picker picker--list" id="budgetPicker" role="radiogroup" aria-label="Budget range"></div>
+          <p class="field__err" data-err-for="budget"></p>
+
+          <div class="field field--wide step__gap">
+            <label for="qDescription">Tell us about the project <span aria-hidden="true">*</span></label>
+            <textarea id="qDescription" name="description" rows="5" required
+              placeholder="What's the space like now, what do you want it to be, anything you already know you want?"></textarea>
+            <p class="field__err" data-err-for="qDescription"></p>
+          </div>
+        </section>
+
+        <!-- ---------- STEP 3 ---------- -->
+        <section class="step" data-step="3" hidden aria-label="Step 3: photos and contact preference">
+          <h3 class="step__title">Photos of the space</h3>
+          <p class="step__hint" id="dropHint"></p>
+
+          <div class="drop" id="dropZone" tabindex="0" role="button"
+               aria-describedby="dropHint"
+               aria-label="Add photos: click to browse, or drag and drop image files here">
+            <svg viewBox="0 0 24 24" class="drop__ico" aria-hidden="true">
+              <path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <p class="drop__text"><strong>Drag photos here</strong><span>or click to browse</span></p>
+          </div>
+          <input id="photoInput" name="photos" type="file" accept="image/*" multiple class="sr-only" tabindex="-1">
+
+          <ul class="previews" id="previews" aria-label="Selected photos"></ul>
+          <p class="field__err" data-err-for="photos"></p>
+
+          <h3 class="step__title step__title--gap">How should we reach you?</h3>
+          <div class="picker picker--inline" id="contactPicker" role="radiogroup" aria-label="Preferred contact method"></div>
+          <p class="field__err" data-err-for="contactMethod"></p>
+        </section>
+
+        <!-- ---------- STEP 4 ---------- -->
+        <section class="step" data-step="4" hidden aria-label="Step 4: your details and review">
+          <h3 class="step__title">Where do we send the quote?</h3>
+
+          <fieldset class="fields">
+            <legend class="sr-only">Your contact details</legend>
+
+            <div class="field">
+              <label for="qName">Name <span aria-hidden="true">*</span></label>
+              <input id="qName" name="name" type="text" autocomplete="name" required>
+              <p class="field__err" data-err-for="qName"></p>
+            </div>
+
+            <div class="field">
+              <label for="qPhone">Phone <span aria-hidden="true">*</span></label>
+              <input id="qPhone" name="phone" type="tel" autocomplete="tel"
+                     inputmode="tel" placeholder="(425) 555-0100" required>
+              <p class="field__err" data-err-for="qPhone"></p>
+            </div>
+
+            <div class="field field--wide">
+              <label for="qEmail">Email <span aria-hidden="true">*</span></label>
+              <input id="qEmail" name="email" type="email" autocomplete="email"
+                     inputmode="email" required>
+              <p class="field__err" data-err-for="qEmail"></p>
+            </div>
+
+            <div class="field field--wide">
+              <label for="qAddress">Project address <span aria-hidden="true">*</span></label>
+              <input id="qAddress" name="address" type="text"
+                     autocomplete="street-address" placeholder="Street, city" required>
+              <p class="field__err" data-err-for="qAddress"></p>
+            </div>
+
+            <!-- Honeypot -->
+            <div class="hp" aria-hidden="true">
+              <label for="qWebsite">Website</label>
+              <input id="qWebsite" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+          </fieldset>
+
+          <h3 class="step__title step__title--gap">Review</h3>
+          <dl class="review" id="quoteReview"></dl>
+        </section>
+
+        <p class="form__error" id="quoteError" role="alert"></p>
+
+        <!-- wizard controls -->
+        <div class="wizard__nav">
+          <button class="btn btn--ghost" type="button" id="quoteBack" hidden>Back</button>
+          <button class="btn btn--primary" type="button" id="quoteNext">Continue</button>
+          <button class="btn btn--forest" type="submit" id="quoteSubmit" hidden>Send my request</button>
+        </div>
+      </form>
+
+      <!-- success -->
+      <div class="confirm" id="quoteSuccess" hidden>
+        <div class="confirm__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 class="confirm__title">Request sent</h3>
+        <p class="confirm__lede" id="quoteSuccessLede"></p>
+        <div class="confirm__actions">
+          <a class="btn btn--ghost" id="quoteSuccessCall" href="#">Call us instead</a>
+        </div>
+        <p class="form__small" id="quoteFallback"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<section class="section" id="contact">
+  <div class="shell">
+    <header class="section-head" data-reveal>
+      <p class="eyebrow">Contact</p>
+      <h2 class="section-title">Get in touch</h2>
+    </header>
+
+    <div class="contact__layout">
+
+      <div class="contact__info" data-reveal>
+        <ul class="contact__list">
+          <li>
+            <span class="contact__label">Phone</span>
+            <a class="contact__value link" id="contactPhone" href="#"></a>
+          </li>
+          <li>
+            <span class="contact__label">Email</span>
+            <a class="contact__value link contact__value--break" id="contactEmail" href="#"></a>
+          </li>
+          <li>
+            <span class="contact__label">Office</span>
+            <span class="contact__value" id="contactAddress"></span>
+          </li>
+          <li>
+            <span class="contact__label">Hours</span>
+            <div class="contact__value">
+              <ul class="hours" id="contactHours"></ul>
+            </div>
+          </li>
+        </ul>
+
+        <div class="contact__map-wrap">
+          <div id="contactMap" class="contact__map" role="img"
+               aria-label="Map pin showing Bellwood Construction's location in Everett, Washington."></div>
+        </div>
+      </div>
+
+      <div class="contact__form-wrap" data-reveal>
+        <h3 class="booking__h3">A quick question?</h3>
+        <p class="step__hint">For anything that isn't a full quote request.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="fields">
+            <div class="field field--wide">
+              <label for="cName">Name <span aria-hidden="true">*</span></label>
+              <input id="cName" name="name" type="text" autocomplete="name" required>
+              <p class="field__err" data-err-for="cName"></p>
+            </div>
+            <div class="field field--wide">
+              <label for="cEmail">Email <span aria-hidden="true">*</span></label>
+              <input id="cEmail" name="email" type="email" autocomplete="email"
+                     inputmode="email" required>
+              <p class="field__err" data-err-for="cEmail"></p>
+            </div>
+            <div class="field field--wide">
+              <label for="cMessage">Message <span aria-hidden="true">*</span></label>
+              <textarea id="cMessage" name="message" rows="5" required></textarea>
+              <p class="field__err" data-err-for="cMessage"></p>
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="cUrl">Url</label>
+              <input id="cUrl" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            </div>
+          </div>
+          <p class="form__error" id="contactError" role="alert"></p>
+          <button class="btn btn--primary btn--block" type="submit">Send message</button>
+          <p class="form__success" id="contactSuccess" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="shell footer__grid">
+
+    <div class="footer__brand">
+      <a class="wordmark wordmark--footer" href="#top" aria-label="Bellwood Construction — back to top">
+        <span class="wordmark__mark" aria-hidden="true"></span>
+        <span class="wordmark__text">
+          <span class="wordmark__name">Bellwood</span>
+          <span class="wordmark__sub">Construction</span>
+        </span>
+      </a>
+      <p class="footer__blurb">
+        Residential remodeling in Everett, Washington — across Snohomish County, Seattle and the Eastside.
+      </p>
+      <ul class="social" id="footerSocial"></ul>
+    </div>
+
+    <nav class="footer__col" aria-label="Footer">
+      <h3 class="footer__h">Explore</h3>
+      <ul class="footer__links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our Work</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#area">Service Area</a></li>
+        <li><a href="#book">Book a Visit</a></li>
+        <li><a href="#quote">Get a Free Quote</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h3 class="footer__h">Service areas</h3>
+      <ul class="footer__links footer__links--plain" id="footerAreas"></ul>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__h">Get in touch</h3>
+      <ul class="footer__links footer__links--plain">
+        <li><a class="link" id="footerPhone" href="#"></a></li>
+        <li><a class="link footer__email" id="footerEmail" href="#"></a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="shell footer__base">
+    <p id="footerCopy"></p>
+  </div>
+</footer>
+
+
+<!-- Floating call button (mobile only) -->
+<a class="call-fab" id="callFab" href="#" aria-label="Call Bellwood Construction now">
+  <svg viewBox="0 0 24 24" aria-hidden="true" class="ico">
+    <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.25 1z" fill="currentColor"/>
+  </svg>
+  <span>Call Now</span>
+</a>
+
+
+<!-- ============================================================
+     LIGHTBOX
+     ============================================================ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true"
+     aria-labelledby="lbCaption" hidden>
+  <button class="lightbox__close" id="lbClose" type="button" aria-label="Close gallery">
+    <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" type="button" aria-label="Previous project">
+    <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+
+  <figure class="lightbox__figure">
+    <div class="lightbox__stage" id="lbStage"><!-- image or before/after slider --></div>
+    <figcaption class="lightbox__cap">
+      <p id="lbCaption"></p>
+      <p class="lightbox__count" id="lbCount"></p>
+    </figcaption>
+  </figure>
+
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" type="button" aria-label="Next project">
+    <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</div>
+
+
+<!-- ===================== SCRIPTS ===================== -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""
+        defer></script>
+<script src="js/config.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

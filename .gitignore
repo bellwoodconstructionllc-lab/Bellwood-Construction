@@ -1,0 +1,31 @@
+# Files git should never track for this site.
+# Everything else in this folder is part of the website and should be
+# committed — including the project photos.
+
+# macOS clutter — Finder drops these in every folder it opens
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows equivalent, in case the folder ever travels
+Thumbs.db
+desktop.ini
+
+# Editor scratch files
+*.swp
+*~
+.vscode/
+.idea/
+
+# Archives made from this folder (the zip on the Desktop lives outside it,
+# but this catches one made by accident inside)
+*.zip
+
+# If a build tool is ever added
+node_modules/
+
+# Secrets, should the site ever gain a server side. Form endpoints are
+# public by design and belong in js/config.js, not here.
+.env
+.env.local

@@ -1,0 +1,6 @@
+# Bellwood Construction LLC
+User-agent: *
+Allow: /
+
+# Once you have a real domain, put it here (and in sitemap.xml).
+# Sitemap: https://yourdomain.com/sitemap.xml
