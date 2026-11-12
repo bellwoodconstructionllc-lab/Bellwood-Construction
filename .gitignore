@@ -29,3 +29,6 @@ node_modules/
 # public by design and belong in js/config.js, not here.
 .env
 .env.local
+
+# Claude Code local preview config
+.claude/
