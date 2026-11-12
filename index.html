@@ -41,9 +41,9 @@
 
 <!-- ===================== STRUCTURED DATA =====================
      LocalBusiness / GeneralContractor markup for Google.
-     NOTE: this mirrors section 1 of js/config.js. When you fill in the
-     street address there, update it here too — the [PLACEHOLDER] values
-     below are the only ones that need it. -->
+     NOTE: this mirrors section 1 of js/config.js. City, state and ZIP only —
+     no street address. If you add one to config.js, add a "streetAddress"
+     line here too so the two stay in step. -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,10 +55,9 @@
   "priceRange": "$$",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "[STREET ADDRESS]",
     "addressLocality": "Everett",
     "addressRegion": "WA",
-    "postalCode": "[ZIP]",
+    "postalCode": "98203",
     "addressCountry": "US"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 47.9790, "longitude": -122.2021 },

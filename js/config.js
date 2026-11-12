@@ -27,9 +27,11 @@ const BELLWOOD = {
     state: 'WA',
     region: 'Snohomish County',
 
-    // ---- STILL TO FILL IN -------------------------------------------
-    streetAddress: '[STREET ADDRESS]',      // e.g. '1234 Rucker Ave, Suite 200'
-    postalCode: '[ZIP]',                    // e.g. '98201'
+    // Street address deliberately left blank — the contact line and the
+    // search-engine markup show city, state and ZIP only. Fill it in if
+    // you ever take a commercial address.
+    streetAddress: '',
+    postalCode: '98203',
     // Not displayed anywhere at the moment — the "Licensed & Insured"
     // panel, the Contact row and the footer line were all taken off.
     // Washington requires a registered contractor's number in advertising,

@@ -301,9 +301,10 @@ const Identity = (() => {
     // --- contact block ---
     const addr = $('#contactAddress');
     if (addr) {
+      const locality = `${B.city}, ${B.state} ${B.postalCode}`;
       addr.textContent = isPlaceholder(B.streetAddress)
-        ? `${B.streetAddress} — ${B.city}, ${B.state} ${B.postalCode}`
-        : `${B.streetAddress}, ${B.city}, ${B.state} ${B.postalCode}`;
+        ? `${B.streetAddress} — ${locality}`
+        : [B.streetAddress, locality].filter(Boolean).join(', ');
     }
 
     const licLine = $('#contactLicense');
