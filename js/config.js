@@ -85,9 +85,9 @@ const BELLWOOD = {
      they hand the visitor a pre-filled email button so nothing is lost.
      ------------------------------------------------------------------ */
   forms: {
-    quoteEndpoint:   '',   // Quote Request form
-    bookingEndpoint: '',   // Book a Visit form
-    contactEndpoint: ''    // Contact section's short form
+    quoteEndpoint:   'https://formspree.io/f/xaeoyloq',   // Quote Request form
+    bookingEndpoint: 'https://formspree.io/f/xaeoyloq',   // Book a Visit form
+    contactEndpoint: 'https://formspree.io/f/xaeoyloq'    // Contact section's short form
   },
 
 
